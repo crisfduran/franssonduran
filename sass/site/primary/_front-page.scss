@@ -1,0 +1,13 @@
+.site-content {
+  background-color: $color__skin;
+}
+#splash {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1em;
+
+}
+#splash > img {
+  padding: 1em;
+}
