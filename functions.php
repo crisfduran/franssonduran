@@ -1,13 +1,13 @@
 <?php
 /**
- * Humescores functions and definitions.
+ * franssonduran functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Humescores
+ * @package franssonduran
  */
 
-if ( ! function_exists( 'humescores_setup' ) ) :
+if ( ! function_exists( 'franssonduran_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,11 +15,11 @@ if ( ! function_exists( 'humescores_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function humescores_setup() {
+function franssonduran_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Humescores, use a find and replace
+	 * If you're building a theme based on franssonduran, use a find and replace
 	 * to change 'franssonduran' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'franssonduran', get_template_directory() . '/languages' );
@@ -53,7 +53,7 @@ function humescores_setup() {
 	) );
 }
 endif;
-add_action( 'after_setup_theme', 'humescores_setup' );
+add_action( 'after_setup_theme', 'franssonduran_setup' );
 
 
 
@@ -64,17 +64,17 @@ add_action( 'after_setup_theme', 'humescores_setup' );
  *
  * @global int $content_width
  */
-function humescores_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'humescores_content_width', 640 );
+function franssonduran_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'franssonduran_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'humescores_content_width', 0 );
+add_action( 'after_setup_theme', 'franssonduran_content_width', 0 );
 
 
 
 /**
  * Enqueue scripts and styles.
  */
-function humescores_scripts() {
+function franssonduran_scripts() {
     // Enqueue Google Fonts: Open Sans
     wp_enqueue_style('franssonduran-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet' );
 
@@ -94,7 +94,7 @@ function humescores_scripts() {
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'humescores_scripts' );
+add_action( 'wp_enqueue_scripts', 'franssonduran_scripts' );
 
 /**
  * Implement the Custom Header feature.
