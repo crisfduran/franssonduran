@@ -75,8 +75,8 @@ add_action( 'after_setup_theme', 'franssonduran_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function franssonduran_scripts() {
-    // Enqueue Google Fonts: Open Sans
-    wp_enqueue_style('franssonduran-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet' );
+    // Enqueue Google Fonts: Open Sans & PT Serif
+    wp_enqueue_style("adding-google-fonts", all_google_fonts());
 
 	wp_enqueue_style( 'franssonduran-style', get_stylesheet_uri() );
 
@@ -95,6 +95,27 @@ function franssonduran_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'franssonduran_scripts' );
+
+
+function all_google_fonts() {
+
+    $fonts = array(
+
+        "Open+Sans:400",
+        "PT+Serif:400"
+
+    );
+
+    $fonts_collection = add_query_arg(array(
+
+        "family"=>urlencode(implode("|",$fonts)),
+
+        "subset"=>"latin"
+
+    ),'https://fonts.googleapis.com/css');
+
+    return $fonts_collection;
+}
 
 /**
  * Implement the Custom Header feature.
